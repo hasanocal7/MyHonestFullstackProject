@@ -26,7 +26,11 @@
       </h1>
       <div class="py-7" />
 
-      <v-btn size="x-large" @click="alertBig()">User Services</v-btn>
+      <router-link to="/users" custom v-slot="{ navigate }">
+        <v-btn size="x-large" @click="navigate" role="link"
+          >User Services</v-btn
+        >
+      </router-link>
     </v-responsive>
   </v-container>
 </template>
@@ -37,11 +41,6 @@ export default {
     return {
       fontColor: "white",
     };
-  },
-  methods: {
-    alertBig() {
-      alert("Under Construction");
-    },
   },
 };
 </script>
